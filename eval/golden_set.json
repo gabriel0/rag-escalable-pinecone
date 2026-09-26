@@ -1,0 +1,50 @@
+[
+  {
+    "pregunta": "¿Cómo se invoca el warmup del pipeline unificado?",
+    "documento_id_esperado": "pipelineWarmUp"
+  },
+  {
+    "pregunta": "¿Qué método borra una lista de imágenes Docker por tag o label?",
+    "documento_id_esperado": "cleanUpFunctions"
+  },
+  {
+    "pregunta": "¿Qué lockfile hace que pythonLibFunctions use Poetry para construir la librería?",
+    "documento_id_esperado": "pythonLibFunctions"
+  },
+  {
+    "pregunta": "¿Qué función obtiene una contraseña temporal de BeyondTrust PAM?",
+    "documento_id_esperado": "pamCredentials"
+  },
+  {
+    "pregunta": "¿Qué método de trivyFunctions unifica imageScanner y mainTrivy?",
+    "documento_id_esperado": "trivyFunctions"
+  },
+  {
+    "pregunta": "¿Qué método abstrae el comando install de un chart de Helm?",
+    "documento_id_esperado": "helmFunctions"
+  },
+  {
+    "pregunta": "¿Cuál es el formato de SBOM por defecto de syftFunctions?",
+    "documento_id_esperado": "syftFunctions"
+  },
+  {
+    "pregunta": "¿Qué método de jiraFunctions lista las transiciones de un issue?",
+    "documento_id_esperado": "jiraFunctions"
+  },
+  {
+    "pregunta": "¿Qué método de k8sFunctions devuelve la versión desplegada de un servicio?",
+    "documento_id_esperado": "k8sFunctions"
+  },
+  {
+    "pregunta": "¿A qué servicio envía notificaciones cuando falla el Quality Gate de Sonar?",
+    "documento_id_esperado": "notificationsFunctions"
+  },
+  {
+    "pregunta": "¿Que metodo me permite desplegar DDL y DDML de base de datos?",
+    "documento_id_esperado": "liquibaseFunctions"
+  },
+  {
+    "pregunta": "¿Que metodo me permite compilar y firmar aplicaciones Andoir e IOS?",
+    "documento_id_esperado": "mobileFastlaneFunctions"
+  }
+]

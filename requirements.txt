@@ -1,0 +1,10 @@
+langchain
+langchain-classic
+langchain-openai
+langchain-pinecone
+langchain-text-splitters
+pinecone>=7
+rank-bm25
+python-dotenv
+tiktoken
+httpx
