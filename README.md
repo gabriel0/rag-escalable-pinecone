@@ -37,11 +37,12 @@ Las tres cosas se usan en este orden:
    palabras de la pregunta en `chunks.json`. El híbrido mezcla las dos listas
    y se queda con 5 chunks.
 
-## Corpus
+## Documentos
 
-En `data/` está la documentación de la librería de pipelines: funciones de
-Jenkins, AWS, Docker, Kubernetes, Helm, Jira y el resto. El `doc_id` de cada
-chunk es el nombre del archivo, sin extensión.
+`chunks.py` lee los markdown de `data/`. Ahí está la documentación de la
+librería de pipelines: funciones de Jenkins, AWS, Docker, Kubernetes, Helm,
+Jira y el resto. El `doc_id` de cada chunk es el nombre del archivo, sin
+extensión.
 
 El golden set apunta a estos documentos:
 
