@@ -79,11 +79,6 @@ en `http://127.0.0.1:11434` y el modelo descargado:
 ollama pull all-minilm
 ```
 
-`qwen2.5:14b` en el otro proyecto redacta la respuesta. No sirve para armar
-el índice: Pinecone guarda vectores, y ese modelo de chat no es un encoder.
-`EMBEDDING_PROVIDER=google` o `openai` vuelven a 1536 dimensiones y obligan
-a recrear el índice. `ingest.py` lo hace solo si la dimensión no coincide.
-
 ## Cómo replicar el índice
 
 Python 3.12, desde esta carpeta:
@@ -136,8 +131,6 @@ En Windows, si la consola rompe los acentos: `python -X utf8 evaluate.py`.
 1. `BM25Retriever` sobre los mismos chunks que se subieron (espejo local en `artifacts/chunks.json`, generado por la ingesta).
 2. `PineconeVectorStore` en el namespace `pre-entrega4`.
 
-La fusión es Reciprocal Rank Fusion y `query()` devuelve los **top 5**.
-
 ## Evaluación
 
 `eval/golden_set.json` tiene 12 preguntas sobre la librería de pipelines.
@@ -147,8 +140,7 @@ Un chunk es útil si su `doc_id` coincide con ese documento.
 - **Recall@5:** 1 si el documento correcto aparece al menos una vez entre los 5.
 - **Precision@5:** fracción de esos 5 cuyo `doc_id` es el esperado.
 
-La última ingesta, con `all-minilm`, subió 260 chunks. BM25 parte
-identificadores como `k8sFunctions.getVersionDeploy` para que el nombre del
+BM25 parte identificadores como `k8sFunctions.getVersionDeploy` para que el nombre del
 método no se pierda como una sola palabra. La precisión queda por debajo de 1
 porque el top 5 mezcla chunks de archivos vecinos: con un solo documento
 correcto, el techo habitual es cerca de 0.40.
